@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+{% load static %}
 
 {% block content %}
 
@@ -16,7 +17,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="box">
               <div class="img-box">
-                <img class="" src="images/teacher-1.jpg" alt="Card image cap">
+                <img class="" src= "{% static 'images/teacher-1.jpg' %}" alt="Card image cap">
               </div>
               <div class="detail-box">
                 <p>
@@ -30,7 +31,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="box">
               <div class="img-box">
-                <img class="" src="images/teacher-2.jpg" alt="Card image cap">
+                <img class="" src="{% static 'images/teacher-2.jpg' %}" alt="Card image cap">
               </div>
               <div class="detail-box">
                 <p>
@@ -44,7 +45,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="box">
               <div class="img-box">
-                <img class="" src="images/teacher-3.jpg" alt="Card image cap">
+                <img class="" src="{% static 'images/teacher-3.jpg' %}" alt="Card image cap">
               </div>
               <div class="detail-box">
                 <p>
@@ -58,7 +59,7 @@
           <div class="col-md-3 col-sm-6">
             <div class="box">
               <div class="img-box">
-                <img class="" src="images/teacher-4.jpg" alt="Card image cap">
+                <img class="" src="{% static 'images/teacher-4.jpg' %}" alt="Card image cap">
               </div>
               <div class="detail-box">
                 <p>
@@ -141,19 +142,19 @@
                 Location
               </h4>
               <div>
-                <img src="images/location.png" alt="" />
+                <img src="{% static 'images/location.png' %}" alt="" />
                 <p>
                   104 loram ipusm
                 </p>
               </div>
               <div>
-                <img src="images/telephone.png" alt="" />
+                <img src="{% static 'images/telephone.png' %}" alt="" />
                 <p>
                   ( +01 1234567890 )
                 </p>
               </div>
               <div>
-                <img src="images/envelope.png" alt="" />
+                <img src="{% static 'images/envelope.png' %}" alt="" />
                 <p>
                   demo@gmail.com
                 </p>
@@ -169,22 +170,22 @@
               <div class="social_container">
                 <div>
                   <a href="">
-                    <img src="images/facebook-logo.png" alt="" />
+                    <img src="{% static 'images/facebook-logo.png' %}" alt="" />
                   </a>
                 </div>
                 <div>
                   <a href="">
-                    <img src="images/twitter-logo.png" alt="" />
+                    <img src="{% static 'images/twitter-logo.png' %}" alt="" />
                   </a>
                 </div>
                 <div>
                   <a href="">
-                    <img src="images/instagram.png" alt="" />
+                    <img src="{% static 'images/instagram.png' %}" alt="" />
                   </a>
                 </div>
                 <div>
                   <a href="">
-                    <img src="images/linkedin.png" alt="" />
+                    <img src="{% static 'images/linkedin.png' %%}" alt="" />
                   </a>
                 </div>
               </div>

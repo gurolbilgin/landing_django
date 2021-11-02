@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block content %}
 
@@ -15,7 +15,7 @@
           </h2>
         </div>
         <div class="img-box">
-          <img src="images/about-img.png" alt="">
+          <img src="{% static 'images/about-img.png' %}" alt="">
         </div>
         <div class="row">
           <div class="col-md-10 mx-auto">
@@ -93,19 +93,19 @@
                 Location
               </h4>
               <div>
-                <img src="images/location.png" alt="" />
+                <img src="{% static 'images/location.png' %}" alt="" />
                 <p>
                   104 loram ipusm
                 </p>
               </div>
               <div>
-                <img src="images/telephone.png" alt="" />
+                <img src="{% static 'images/telephone.png' %}" alt="" />
                 <p>
                   ( +01 1234567890 )
                 </p>
               </div>
               <div>
-                <img src="images/envelope.png" alt="" />
+                <img src="{% static 'images/envelope.png' %}" alt="" />
                 <p>
                   demo@gmail.com
                 </p>
@@ -121,22 +121,22 @@
               <div class="social_container">
                 <div>
                   <a href="">
-                    <img src="images/facebook-logo.png" alt="" />
+                    <img src="{% static 'images/facebook-logo.png' %}" alt="" />
                   </a>
                 </div>
                 <div>
                   <a href="">
-                    <img src="images/twitter-logo.png" alt="" />
+                    <img src="{% static 'images/twitter-logo.png' %}" alt="" />
                   </a>
                 </div>
                 <div>
                   <a href="">
-                    <img src="images/instagram.png" alt="" />
+                    <img src="{% static 'images/instagram.png' %}" alt="" />
                   </a>
                 </div>
                 <div>
                   <a href="">
-                    <img src="images/linkedin.png" alt="" />
+                    <img src="{% static 'images/linkedin.png' %}" alt="" />
                   </a>
                 </div>
               </div>
