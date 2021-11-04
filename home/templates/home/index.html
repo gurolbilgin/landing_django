@@ -1,17 +1,16 @@
 {% extends 'base.html' %}
-
 {% load static %}
 
 {% block content %}
 
 {% if messages %}
-<ul class="messages"  style="list-style-type: none;" >
+<ul class="messages">
     {% for message in messages %}
-    <li{% if message.tags %} class="{{ message.tags }}"{% endif %} >{{ message }}</li>
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
     {% endfor %}
 </ul>
 {% endif %}
-
+    <!-- end header section -->
     <!-- slider section -->
     <section class=" slider_section position-relative">
       <div id="Customcarousel1" class="carousel slide" data-ride="carousel">
@@ -37,7 +36,7 @@
                 </div>
                 <div class="col-md-6">
                   <div class="img-box">
-                    <img src="{% static 'images/slider-img.png' %}" alt="">
+                    <img src= "{% static 'images/slider-img.png' %}"  alt="">
                   </div>
                 </div>
               </div>
@@ -132,7 +131,7 @@
           </div>
         </div>
         <div class="btn-box">
-          <a href={% url 'about' %}>
+          <a href="">
             Read More
           </a>
         </div>
@@ -150,12 +149,12 @@
         </h2>
       </div>
       <div class="teacher_container layout_padding2">
-      {% for teacher in teachers %}
         <div class="row">
+          {% for teacher in teachers  %}
           <div class="col-md-3 col-sm-6">
             <div class="box">
               <div class="img-box">
-                <img class="" src="{{teacher.image.url}}" alt="Card image cap">
+                <img class="" src= "{{teacher.image.url}}" alt="Card image cap">
               </div>
               <div class="detail-box">
                 <p>
@@ -166,12 +165,12 @@
               </div>
             </div>
           </div>
-          
+          {% endfor %}
+
         </div>
-      {% endfor %}
       </div>
       <div class="btn-box">
-        <a href= {% url 'teacher' %}>
+        <a href="">
           See More
         </a>
       </div>
@@ -241,20 +240,9 @@
               <div class="img_container">
                 <div class="img-box">
                   <div class="img_box-inner">
-                    <img src="{% static 'images/client.png' %}" alt="">
+                    <img src="{% static 'images/client.png'%}" alt="">
                   </div>
                 </div>
-              </div>
-              <div class="detail-box">
-                <h5>
-                  Hingaroo
-                </h5>
-                <h6>
-                  Student
-                </h6>
-                <p>
-                  Nullam eros enim, ultricies ac nunc ac, semper feugiat ipsum. Proin nec justo dapibus, cursus tellus in, condimentum mauris.
-                </p>
               </div>
             </div>
           </div>
@@ -288,19 +276,19 @@
                 Get In Touch
               </h2>
             </div>
-            <form action='' method='POST'>
+            <form action="" method="POST">
               {% csrf_token %}
               <div>
-                  {{form.name}}
+                {{form.name}}
               </div>
               <div>
-                  {{form.phone_number}}
+                {{form.phone_number}}
               </div>
               <div>
-                  {{form.email}}
+                {{form.email}}
               </div>
               <div>
-                  {{form.message}}
+                {{form.message}}
               </div>
               <div class="d-flex  mt-4 ">
                 <button>
@@ -309,14 +297,6 @@
               </div>
             </form>
 
-
-
-          
-     
-          
-           
-           
-
           </div>
         </div>
       </div>
@@ -324,92 +304,4 @@
 
     <!-- end contact section -->
 
-    <!-- info section -->
-    <section class="info_section layout_padding-top layout_padding2-bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-lg-3">
-            <div class="info_links pl-lg-5">
-              <h4 class="font-weight-bold">
-                VISDOR
-              </h4>
-              <p>
-                It is a long established fact that a reader will be distracted by the
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="info_contact">
-              <h4>
-                Location
-              </h4>
-              <div>
-                <img src="{% static 'images/location.png' %}" alt="" />
-                <p>
-                  104 loram ipusm
-                </p>
-              </div>
-              <div>
-                <img src="{% static 'images/telephone.png' %}" alt="" />
-                <p>
-                  ( +01 1234567890 )
-                </p>
-              </div>
-              <div>
-                <img src="{% static 'images/envelope.png' %}" alt="" />
-                <p>
-                  demo@gmail.com
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3">
-            <div class="info_social">
-              <h4>
-                Social Link
-              </h4>
-              <div class="social_container">
-                <div>
-                  <a href="">
-                    <img src="{% static 'images/facebook-logo.png' %}" alt="" />
-                  </a>
-                </div>
-                <div>
-                  <a href="">
-                    <img src="{% static 'images/twitter-logo.png' %}" alt="" />
-                  </a>
-                </div>
-                <div>
-                  <a href="">
-                    <img src="{% static 'images/instagram.png' %}" alt="" />
-                  </a>
-                </div>
-                <div>
-                  <a href="">
-                    <img src="{% static 'images/linkedin.png'%}" alt="" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="info_form">
-              <h4>
-                Newsletter
-              </h4>
-              <form action="">
-                <input type="text" placeholder="Enter Your Email" />
-                <button type="submit">
-                  Subscribe
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- end info_section -->
-
-  {% endblock content %}
+    {% endblock content %}
