@@ -14,19 +14,25 @@
       </div>
       <div class="teacher_container layout_padding2">
         <div class="row">
+        {% for teacher in teachers %}
           <div class="col-md-3 col-sm-6">
             <div class="box">
               <div class="img-box">
-                <img class="" src= "{% static 'images/teacher-1.jpg' %}" alt="Card image cap">
+                <img class="" src= "{{teacher.image.url}}" alt="Card image cap">
               </div>
               <div class="detail-box">
                 <p>
+                  <h4>
+                   {{teacher.first_name}} {{teacher.last_name}}
+                  </h4>
                   <h5>
-                    Rose Adams
+                    {{teacher.speciality}} <br>
+                    {{teacher.phone_teacher}} - {{teacher.email_teacher}}
                   </h5>
                 </p>
               </div>
             </div>
+        {% endfor %}
           </div>
           <div class="col-md-3 col-sm-6">
             <div class="box">
@@ -87,38 +93,7 @@
 
     <!-- contact section -->
 
-    <section class="contact_section ">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-7 mx-auto">
-            <div class="heading_container">
-              <h2 class="">
-                Get In Touch
-              </h2>
-            </div>
-            <form action="">
-              <div>
-                <input type="text" placeholder="Name" />
-              </div>
-              <div>
-                <input type="text" placeholder="Pone Number" />
-              </div>
-              <div>
-                <input type="email" placeholder="Email" />
-              </div>
-              <div>
-                <input type="text" class="message-box" placeholder="Message" />
-              </div>
-              <div class="d-flex  mt-4 ">
-                <button>
-                  SEND
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+
 
     <!-- end contact section -->
 
